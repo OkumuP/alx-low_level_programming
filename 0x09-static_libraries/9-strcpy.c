@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * char *_strcpy - a function that copies the string pointed to by src
+ * char *_strcpy - to copy a str pointed to a source
  * @dest: copy to
  * @src: copy from
- * Return: string
+ * Return:the string
  */
 char *_strcpy(char *dest, char *src)
 {
