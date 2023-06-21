@@ -2,15 +2,15 @@
 #include <stdlib.h>
 
 /**
- * main - prints its own opcodes
- * @argc: number of arguments
- * @argv: array of arguments
+ * main - this prints it's opcodes
+ * @argc: the number of arguments passed
+ * @argv: the array of arguments
  *
- * Return: Always 0 (Success)
+ * Return: 0 on success
  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
+	int bytes, a;
 	char *arr;
 
 	if (argc != 2)
@@ -29,14 +29,14 @@ int main(int argc, char *argv[])
 
 	arr = (char *)main;
 
-	for (i = 0; i < bytes; i++)
+	for (a = 0; a < bytes; a++)
 	{
-		if (i == bytes - 1)
+		if (a == bytes - 1)
 		{
-			printf("%02hhx\n", arr[i]);
+			printf("%02hhx\n", arr[a]);
 			break;
 		}
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx ", arr[a]);
 	}
 	return (0);
 }
