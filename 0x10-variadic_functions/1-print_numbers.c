@@ -10,22 +10,20 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
+	va_list nums;
+	unsigned int index;
 
-	unsigned int a;
+	va_start(nums, n);
 
-	va_list numbers
-
-	va_start(numbers, n);
-
-	for (a = 0; a < n; a++)
+	for (index = 0; index < n; index++)
 	{
-		printf("%d", va_arg(numbers, int));
+		printf("%d", va_arg(nums, int));
 
-		if (a != (n - 1) && separator != NULL)
+		if (index != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 
 	printf("\n");
 
-	va_end(numbers);
+	va_end(nums);
 }
