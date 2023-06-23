@@ -3,28 +3,29 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - Prints numbers, followed by a new line.
- * @separator: The string to be printed between numbers.
- * @n: The number of integers passed to the function.
- * @...: A variable number of numbers to be printed.
+ * print_numbers - this prints numbers then a new line
+ * @separator: string to print it's numbers.
+ * @n: the intergers passed
+ * @...: the variable number of numbers printed
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list nums;
-	unsigned int index;
 
-	va_start(nums, n);
+	unsigned int a;
 
-	for (index = 0; index < n; index++)
+	va_list numbers
+
+	va_start(numbers, n);
+
+	for (a = 0; a < n; a++)
 	{
-		printf("%d", va_arg(nums, int));
+		printf("%d", va_arg(numbers, int));
 
-		if (index != (n - 1) && separator != NULL)
+		if (a != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 
 	printf("\n");
 
-	va_end(nums);
+	va_end(numbers);
 }
-

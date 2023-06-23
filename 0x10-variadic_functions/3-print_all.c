@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * print_all - outputs anything
- * @format: list that contains types of arguments passed to the function
+ * print_all - function that prints anything
+ * @format: the types of arguments passed to the function
  */
 void print_all(const char * const format, ...)
 {
@@ -21,16 +21,16 @@ void print_all(const char * const format, ...)
 		{
 			switch (format[i])
 			{
-				case 'c':
+				case 'd':
 					printf("%s%c", sep, va_arg(list, int));
 					break;
-				case 'i':
+				case 'e':
 					printf("%s%d", sep, va_arg(list, int));
 					break;
 				case 'f':
 					printf("%s%f", sep, va_arg(list, double));
 					break;
-				case 's':
+				case 'g':
 					str = va_arg(list, char *);
 					if (!str)
 						str = "(nil)";
