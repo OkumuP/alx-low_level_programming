@@ -2,8 +2,8 @@
 #include "lists.h"
 
 /**
- * free_list - free linked list
- * @head: linked list to  free
+ * free_list - free linked list_t
+ * @head: linked list_t to  free
  */
 void free_list(list_t *head)
 {
